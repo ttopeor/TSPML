@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy/test_rclpy/_rclpy_pybind11.cpython-310-x86_64-linux-gnu.so" "TARGETS" "_rclpy_pybind11" "DESTINATION" "lib/python3.10/site-packages/rclpy")

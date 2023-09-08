@@ -1,0 +1,1 @@
+/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy/ament_cmake_core/rclpyConfig-version.cmake

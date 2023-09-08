@@ -1,0 +1,4 @@
+[submodule "script/ref/rclpy_ws/src/rclpy"]
+	path = script/ref/rclpy_ws/src/rclpy
+	url = https://github.com/ros2/rclpy.git
+	branch = humble

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_python_allocator.dir/test/test_python_allocator.cpp.o -o test_python_allocator  -Wl,-rpath,/home/robot/mambaforge/lib gtest/libgtest_main.a gtest/libgtest.a -pthread /home/robot/mambaforge/lib/libpython3.10.so 
