@@ -1,9 +1,9 @@
 import argparse
 import asyncio
 import websockets
-import queue
 import json
 from functools import partial
+import threading
 
 import gym
 import torch
@@ -25,10 +25,11 @@ simulation_app = SimulationApp(config)
 import omni.isaac.orbit_envs  # noqa: F401
 from omni.isaac.orbit_envs.utils import parse_env_cfg
 
-action_queue = queue.Queue()
 env = None
-current_talker = None
-current_listener = []
+current_talkers = []
+current_listeners = []
+global_actions = None
+listener_env_nums = {}
 
 
 async def ws_server():
@@ -37,44 +38,51 @@ async def ws_server():
 
 
 async def handle_connection(websocket, path):
-    global current_talker, current_listener, env
+    global current_talkers, current_listeners, env, listener_env_nums
 
-    # First, we expect the client to send its type: 'talker' or 'listener'
     client_type = await websocket.recv()
 
     if client_type == 'talker':
-        if current_talker:  # check if a talker is already connected
-            await websocket.send("Another talker is already connected.")
-            return
-        current_talker = websocket
-    elif client_type == 'listener':
-        current_listener.append(websocket)
+        current_talkers.append(websocket)
+    elif 'listener' in client_type:   # Assuming listeners will send "listener_X" where X is the env_num
+        current_listeners.append(websocket)
+        env_num = int(client_type.split('_')[-1])   # Extract the env_num
+        listener_env_nums[websocket] = env_num
     else:
         print(f"Unknown client type: {client_type}")
         return
 
     print(f"{client_type} connected.")
-    print(f"Current listener number: {len(current_listener)}")
+    print(f"Current talkers number: {len(current_talkers)}")
+    print(f"Current listener number: {len(current_listeners)}")
 
     try:
         if client_type == 'talker':
             while True:
-                actions_data = await websocket.recv()
-                actions_list = json.loads(actions_data)
-                if (len(actions_list) == env.num_envs):
-                    actions = torch.tensor(actions_list, dtype=torch.float32, device=env.device)
-                    action_queue.put(actions)  # Put actions into queue for processing
+                data = await websocket.recv()
+                talker_data = json.loads(data)
+
+                if 'env_num' in talker_data and 'desire_pos' in talker_data:
+                    env_num = talker_data['env_num']
+                    desire_pos = torch.tensor(talker_data['desire_pos'], dtype=torch.float32, device=env.device)
+
+                    if desire_pos.shape[0] == env.action_space.shape[0]:
+                        global_actions[env_num] = desire_pos
+                    else:
+                        print(f"Received data does not match action space shape for env_num {env_num}!")
+                        print(f"Desired shape is {env.action_space.shape[0]} but received {desire_pos.shape[0]}")
                 else:
-                    print(f"Require {env.num_envs} Robot actions, but {len(actions_list)} actions received.")
-        if client_type == 'listener':
+                    print("Received invalid data from talker!")
+
+        if client_type.startswith('listener'):
             while True:
                 await asyncio.sleep(1)
 
     except websockets.ConnectionClosed:
-        if client_type == 'talker':
-            current_talker = None
-        elif client_type == 'listener' and websocket in current_listener:
-            current_listener.remove(websocket)
+        if client_type == 'talker' and websocket in current_talkers:
+            current_talkers.remove(websocket)
+        elif client_type == 'listener' and websocket in current_listeners:
+            current_listeners.remove(websocket)
         print(f"{client_type} disconnected.")
 
 
@@ -98,62 +106,61 @@ async def safe_send(listener, json_data):
 
 
 def main():
-    global env
+    global env, global_actions
+
+    # Your environment setup code here
     env_cfg = parse_env_cfg(args_cli.task, use_gpu=not args_cli.cpu, num_envs=args_cli.num_envs)
     env = gym.make(args_cli.task, cfg=env_cfg, headless=args_cli.headless)
     env.reset()
 
-    # Initialize last_actions as zeros
-    last_actions = torch.zeros((env.num_envs, env.action_space.shape[0]), device=env.device)
+    # Initialize the global action tensor now
+    # global_actions = torch.zeros((env.num_envs, env.action_space.shape[0]), device=env.device)
+    dof_pos, _ = env.robot.get_default_dof_state()
+    dof_pos[0, -2] = 1.0 if dof_pos[0, -2] > 0.035 else -1.0
+    dof_pos = dof_pos[:, :-1]
+    global_actions = dof_pos
 
-    # Start websocket server in a separate thread
-    import threading
     websocket_thread = threading.Thread(target=websocket_thread_function)
     websocket_thread.start()
 
-    # Create and set a new event loop
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
 
-    # Main loop to simulate environment
     while simulation_app.is_running():
-        if not action_queue.empty():
-            actions = action_queue.get()  # Get actions from queue
-            last_actions = actions
-        else:
-            actions = last_actions
-        _, _, _, _ = env.step(actions)
+        _, _, _, _ = env.step(global_actions)
 
-        if current_listener:
-            data_dict = {
-                "arm_dof_pos": env.robot.data.arm_dof_pos.cpu().numpy().tolist(),
-                "arm_dof_vel": env.robot.data.arm_dof_vel.cpu().numpy().tolist(),
-                "arm_dof_acc": env.robot.data.arm_dof_acc.cpu().numpy().tolist()
-            }
-            json_data = json.dumps(data_dict)  # Convert list to JSON string
-
+        if current_listeners:
             listeners_to_remove = []
 
-            for listener in current_listener:
-                successful = loop.run_until_complete(safe_send(listener, json_data))
-                if not successful:
-                    listeners_to_remove.append(listener)
+            for listener in current_listeners:
+                env_num = listener_env_nums.get(listener)
+                if env_num is not None:
+                    data_dict = {
+                        "arm_dof_pos": env.robot.data.arm_dof_pos[env_num].cpu().numpy().tolist(),
+                        "arm_dof_vel": env.robot.data.arm_dof_vel[env_num].cpu().numpy().tolist(),
+                        # "arm_dof_acc": env.robot.data.arm_dof_acc[env_num].cpu().numpy().tolist(),
+                        "tool_dof_pos": env.robot.data.tool_dof_pos[env_num].cpu().numpy().tolist(),
+                        "tool_dof_vel": env.robot.data.tool_dof_vel[env_num].cpu().numpy().tolist(),
+                        # "tool_dof_acc": env.robot.data.tool_dof_acc[env_num].cpu().numpy().tolist(),
+                    }
+                    json_data = json.dumps(data_dict)
+                    successful = loop.run_until_complete(safe_send(listener, json_data))
+                    if not successful:
+                        listeners_to_remove.append(listener)
+                else:
+                    listeners_to_remove.append(listener)  # Remove if no env_num is associated
 
-            # Remove disconnected listeners
             for listener in listeners_to_remove:
-                current_listener.remove(listener)
+                current_listeners.remove(listener)
+                listener_env_nums.pop(listener, None)  # Remove the listener from the env_num mapping as well
                 print(f"listener removed: {len(listeners_to_remove)}")
-                print(f"Current listener number: {len(current_listener)}")
+                print(f"Current listener number: {len(current_listeners)}")
 
-        # check if simulator is stopped
         if env.unwrapped.sim.is_stopped():
             break
 
-    # close the simulator
     env.close()
     simulation_app.close()
-    
-    # Close the event loop
     loop.close()
 
 

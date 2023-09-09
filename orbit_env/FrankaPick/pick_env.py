@@ -137,16 +137,16 @@ class PickEnv(IsaacEnv):
         # reward
         self.reward_buf = self._reward_manager.compute()
         # terminations
-        self._check_termination()
+        # self._check_termination()
         # -- store history
         self.previous_actions = self.actions.clone()
 
         # -- add information to extra if timeout occurred due to episode length
         # Note: this is used by algorithms like PPO where time-outs are handled differently
-        self.extras["time_outs"] = self.episode_length_buf >= self.max_episode_length
+        # self.extras["time_outs"] = self.episode_length_buf >= self.max_episode_length
         # -- add information to extra if task completed
-        object_position_error = torch.norm(self.object.data.root_pos_w - self.object_des_pose_w[:, 0:3], dim=1)
-        self.extras["is_success"] = torch.where(object_position_error < 0.02, 1, self.reset_buf)
+        # object_position_error = torch.norm(self.object.data.root_pos_w - self.object_des_pose_w[:, 0:3], dim=1)
+        # self.extras["is_success"] = torch.where(object_position_error < 0.02, 1, self.reset_buf)
 
     def _get_observations(self) -> VecEnvObs:
         # compute observations
@@ -190,7 +190,11 @@ class PickEnv(IsaacEnv):
         self.actions = torch.zeros((self.num_envs, self.num_actions), device=self.device)
         self.previous_actions = torch.zeros((self.num_envs, self.num_actions), device=self.device)
         # robot joint actions
-        self.robot_actions = torch.zeros((self.num_envs, self.robot.num_actions), device=self.device)
+        # self.robot_actions = torch.zeros((self.num_envs, self.robot.num_actions), device=self.device)
+        dof_pos, _ = self.robot.get_default_dof_state()
+        dof_pos[0, -2] = 1.0 if dof_pos[0, -2] > 0.035 else -1.0
+        dof_pos = dof_pos[:, :-1]
+        self.robot_actions = dof_pos
         # commands
         self.object_des_pose_w = torch.zeros((self.num_envs, 7), device=self.device)
         # buffers

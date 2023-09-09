@@ -66,6 +66,8 @@ og.Controller.edit(
             # Providing the robot path is equivalent to setting the targetPrim in Articulation Controller node
             ("ArticulationController.inputs:usePath", True),
             ("ArticulationController.inputs:robotPath", "/panda"),
+            #("PublishJointState.inputs:topicName", "isaac_joint_states")
+            #("SubscribeJointState.inputs:topicName", "isaac_joint_commands")
         ],
     },
 )

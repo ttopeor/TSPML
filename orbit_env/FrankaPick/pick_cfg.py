@@ -42,12 +42,12 @@ FRANKA_PANDA_ARM_WITH_PANDA_HAND_CFG = SingleArmManipulatorCfg(
     init_state=SingleArmManipulatorCfg.InitialStateCfg(
         dof_pos={
             "panda_joint1": 0.0,
-            "panda_joint2": -0.569,
+            "panda_joint2": -0.7850000262260437,
             "panda_joint3": 0.0,
-            "panda_joint4": -2.810,
+            "panda_joint4": -2.3559999465942383,
             "panda_joint5": 0.0,
-            "panda_joint6": 3.037,
-            "panda_joint7": 0.741,
+            "panda_joint6": 1.57079632679,
+            "panda_joint7": 0.7850000262260437,
             "panda_finger_joint*": 0.04,
         },
         dof_vel={".*": 0.0},
@@ -57,6 +57,7 @@ FRANKA_PANDA_ARM_WITH_PANDA_HAND_CFG = SingleArmManipulatorCfg(
     ),
     rigid_props=SingleArmManipulatorCfg.RigidBodyPropertiesCfg(
         max_depenetration_velocity=5.0,
+        disable_gravity=True,
     ),
     collision_props=SingleArmManipulatorCfg.CollisionPropertiesCfg(
         contact_offset=0.005,
@@ -71,13 +72,13 @@ FRANKA_PANDA_ARM_WITH_PANDA_HAND_CFG = SingleArmManipulatorCfg(
             model_cfg=ImplicitActuatorCfg(velocity_limit=100.0, torque_limit=87.0),
             control_cfg=ActuatorControlCfg(
                 command_types=["p_abs"],
-                stiffness={".*": 800.0},
-                damping={".*": 40.0},
+                stiffness={".*": 1e5},
+                # damping={".*": 40.0},
                 dof_pos_offset={
                     "panda_joint1": 0.0,
-                    "panda_joint2": -0.569,
+                    "panda_joint2": 0.0,
                     "panda_joint3": 0.0,
-                    "panda_joint4": -2.810,
+                    "panda_joint4": 0.0,
                 },
             ),
         ),
@@ -86,9 +87,9 @@ FRANKA_PANDA_ARM_WITH_PANDA_HAND_CFG = SingleArmManipulatorCfg(
             model_cfg=ImplicitActuatorCfg(velocity_limit=100.0, torque_limit=12.0),
             control_cfg=ActuatorControlCfg(
                 command_types=["p_abs"],
-                stiffness={".*": 800.0},
-                damping={".*": 40.0},
-                dof_pos_offset={"panda_joint5": 0.0, "panda_joint6": 3.037, "panda_joint7": 0.741},
+                stiffness={".*": 1e5},
+                # damping={".*": 40.0},
+                dof_pos_offset={"panda_joint5": 0.0, "panda_joint6": 0.0, "panda_joint7": 0.0},
             ),
         ),
         "panda_hand": GripperActuatorGroupCfg(

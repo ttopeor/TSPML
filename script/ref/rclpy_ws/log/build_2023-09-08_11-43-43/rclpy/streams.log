@@ -1,0 +1,99 @@
+[0.018s] Invoking command in '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy -- -j20 -l20
+[0.065s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[0.065s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[0.072s] [35m[1mConsolidate compiler generated dependencies of target _rclpy_pybind11[0m
+[0.074s] [  0%] Built target ament_cmake_python_symlink_rclpy
+[0.079s] [  5%] Built target gtest_main
+[0.079s] [ 10%] Built target gtest
+[0.084s] [35m[1mConsolidate compiler generated dependencies of target test_python_allocator[0m
+[0.096s] [ 16%] Built target test_python_allocator
+[0.122s] [100%] Built target _rclpy_pybind11
+[0.162s] running egg_info
+[0.167s] writing rclpy.egg-info/PKG-INFO
+[0.167s] writing dependency_links to rclpy.egg-info/dependency_links.txt
+[0.167s] writing top-level names to rclpy.egg-info/top_level.txt
+[0.182s] reading manifest file 'rclpy.egg-info/SOURCES.txt'
+[0.183s] writing manifest file 'rclpy.egg-info/SOURCES.txt'
+[0.197s] [100%] Built target ament_cmake_python_build_rclpy_egg
+[0.203s] Invoked command in '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy -- -j20 -l20
+[0.252s] Invoking command in '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy
+[0.256s] -- Install configuration: ""
+[0.257s] -- Execute custom install script
+[0.257s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/pythonpath.sh
+[0.257s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/pythonpath.dsv
+[0.257s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy-3.3.9-py3.10.egg-info/PKG-INFO
+[0.257s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy-3.3.9-py3.10.egg-info/SOURCES.txt
+[0.257s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy-3.3.9-py3.10.egg-info/dependency_links.txt
+[0.257s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy-3.3.9-py3.10.egg-info/top_level.txt
+[0.258s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/__init__.py
+[0.258s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/__init__.py
+[0.258s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/client.py
+[0.258s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/graph.py
+[0.258s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/server.py
+[0.258s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/callback_groups.py
+[0.258s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/client.py
+[0.258s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/clock.py
+[0.258s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/constants.py
+[0.258s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/context.py
+[0.258s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/duration.py
+[0.258s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/exceptions.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/executors.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/expand_topic_name.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/guard_condition.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/__init__.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/implementation_singleton.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/logging_severity.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/rcutils_logger.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/__init__.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/managed_entity.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/node.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/publisher.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/logging.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/node.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/parameter.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/parameter_service.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/publisher.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/qos.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/qos_event.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/qos_overriding_options.py
+[0.259s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/serialization.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/service.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/signals.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/subscription.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/task.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/time.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/time_source.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/timer.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/topic_endpoint_info.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/topic_or_service_is_hidden.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/type_support.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/utilities.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_full_topic_name.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_namespace.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_node_name.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_parameter_name.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_topic_name.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/waitable.py
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/_rclpy_pybind11.cpython-310-x86_64-linux-gnu.so
+[0.260s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/library_path.sh
+[0.261s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/library_path.dsv
+[0.261s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/ament_index/resource_index/package_run_dependencies/rclpy
+[0.261s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/ament_index/resource_index/parent_prefix_path/rclpy
+[0.261s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/ament_prefix_path.sh
+[0.261s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/ament_prefix_path.dsv
+[0.261s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/path.sh
+[0.261s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/path.dsv
+[0.261s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/local_setup.bash
+[0.261s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/local_setup.sh
+[0.261s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/local_setup.zsh
+[0.261s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/local_setup.dsv
+[0.261s] -- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/package.dsv
+[0.266s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/ament_index/resource_index/packages/rclpy
+[0.266s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/cmake/rclpyConfig.cmake
+[0.266s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/cmake/rclpyConfig-version.cmake
+[0.266s] -- Up-to-date symlink: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/package.xml
+[0.284s] Listing '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy'...
+[0.284s] Listing '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action'...
+[0.284s] Listing '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl'...
+[0.284s] Listing '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle'...
+[0.288s] Invoked command in '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy
