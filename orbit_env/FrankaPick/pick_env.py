@@ -137,16 +137,16 @@ class PickEnv(IsaacEnv):
         # reward
         self.reward_buf = self._reward_manager.compute()
         # terminations
-        # self._check_termination()
+        self._check_termination()
         # -- store history
         self.previous_actions = self.actions.clone()
 
         # -- add information to extra if timeout occurred due to episode length
         # Note: this is used by algorithms like PPO where time-outs are handled differently
-        # self.extras["time_outs"] = self.episode_length_buf >= self.max_episode_length
+        self.extras["time_outs"] = self.episode_length_buf >= self.max_episode_length
         # -- add information to extra if task completed
-        # object_position_error = torch.norm(self.object.data.root_pos_w - self.object_des_pose_w[:, 0:3], dim=1)
-        # self.extras["is_success"] = torch.where(object_position_error < 0.02, 1, self.reset_buf)
+        object_position_error = torch.norm(self.object.data.root_pos_w - self.object_des_pose_w[:, 0:3], dim=1)
+        self.extras["is_success"] = torch.where(object_position_error < 0.02, 1, self.reset_buf)
 
     def _get_observations(self) -> VecEnvObs:
         # compute observations

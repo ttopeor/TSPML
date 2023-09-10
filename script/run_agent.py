@@ -114,7 +114,6 @@ def main():
     env.reset()
 
     # Initialize the global action tensor now
-    # global_actions = torch.zeros((env.num_envs, env.action_space.shape[0]), device=env.device)
     dof_pos, _ = env.robot.get_default_dof_state()
     dof_pos[0, -2] = 1.0 if dof_pos[0, -2] > 0.035 else -1.0
     dof_pos = dof_pos[:, :-1]
@@ -128,7 +127,6 @@ def main():
 
     while simulation_app.is_running():
         _, _, _, _ = env.step(global_actions)
-
         if current_listeners:
             listeners_to_remove = []
 
@@ -138,10 +136,9 @@ def main():
                     data_dict = {
                         "arm_dof_pos": env.robot.data.arm_dof_pos[env_num].cpu().numpy().tolist(),
                         "arm_dof_vel": env.robot.data.arm_dof_vel[env_num].cpu().numpy().tolist(),
-                        # "arm_dof_acc": env.robot.data.arm_dof_acc[env_num].cpu().numpy().tolist(),
                         "tool_dof_pos": env.robot.data.tool_dof_pos[env_num].cpu().numpy().tolist(),
                         "tool_dof_vel": env.robot.data.tool_dof_vel[env_num].cpu().numpy().tolist(),
-                        # "tool_dof_acc": env.robot.data.tool_dof_acc[env_num].cpu().numpy().tolist(),
+                        "reset_buf": int(env.reset_buf[env_num].item()),
                     }
                     json_data = json.dumps(data_dict)
                     successful = loop.run_until_complete(safe_send(listener, json_data))

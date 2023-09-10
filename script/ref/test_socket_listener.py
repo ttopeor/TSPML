@@ -1,6 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import JointState
+from std_msgs.msg import Int32
 import asyncio
 import websockets
 import websockets.exceptions
@@ -15,7 +16,8 @@ os.environ['ROS_DOMAIN_ID'] = str(ENV_NUM)
 class JointStatePublisher(Node):
     def __init__(self):
         super().__init__('joint_state_publisher')
-        self.publisher = self.create_publisher(JointState, '/isaac_joint_states', 10)
+        self.joint_state_publisher = self.create_publisher(JointState, '/isaac_joint_states', 10)
+        self.reset_buf_publisher = self.create_publisher(Int32, '/reset_buf', 10)  # <- New publisher for reset_buf
         self.start_time = time.time()
 
     def publish_data(self, data):
@@ -30,9 +32,13 @@ class JointStatePublisher(Node):
         # Here I'm filling only the first 7 positions, velocities, and efforts with your data
         joint_state_msg.position = data['arm_dof_pos'] + data['tool_dof_pos']  # assuming last two are 0 for fingers
         joint_state_msg.velocity = data['arm_dof_vel'] + data['tool_dof_vel']
-        # joint_state_msg.effort = data['arm_dof_acc'] + data['tool_dof_acc']  # Assuming the acc is actually effort data. If not, replace this
 
-        self.publisher.publish(joint_state_msg)
+        self.joint_state_publisher.publish(joint_state_msg)
+
+        # Publishing reset_buf
+        reset_buf_msg = Int32()
+        reset_buf_msg.data = data['reset_buf']
+        self.reset_buf_publisher.publish(reset_buf_msg)
 
 
 async def listener_client(env_num, publisher_node):
