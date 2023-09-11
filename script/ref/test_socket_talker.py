@@ -47,7 +47,7 @@ class TalkerNode(Node):
         position_list = tensor_data.numpy().tolist()
         position_list.pop()  # remove the last element from the list
         position_list[-1] = 1.0 if position_list[-1] > 0.035 else -1.0
-        
+
         # Create a dictionary to send
         data_dict = {
             "env_num": self.env_num,
@@ -59,7 +59,7 @@ class TalkerNode(Node):
 
     async def send_data(self, data):
         await self.websocket.send(data)
-        print("Sent:", data)
+        # print("Sent:", data)
 
 
 async def talker_client():

@@ -63,7 +63,7 @@ async def handle_connection(websocket, path):
                 talker_data = json.loads(data)
 
                 if 'env_num' in talker_data and 'desire_pos' in talker_data:
-                    env_num = talker_data['env_num']
+                    env_num = int(talker_data['env_num'])
                     desire_pos = torch.tensor(talker_data['desire_pos'], dtype=torch.float32, device=env.device)
 
                     if desire_pos.shape[0] == env.action_space.shape[0]:
@@ -71,6 +71,7 @@ async def handle_connection(websocket, path):
                     else:
                         print(f"Received data does not match action space shape for env_num {env_num}!")
                         print(f"Desired shape is {env.action_space.shape[0]} but received {desire_pos.shape[0]}")
+                        
                 else:
                     print("Received invalid data from talker!")
 
