@@ -79,12 +79,17 @@ async def handle_connection(websocket, path):
             while True:
                 await asyncio.sleep(1)
 
-    except websockets.ConnectionClosed:
+    except websockets.ConnectionClosed as e:
+        # Handle the disconnect as before
         if client_type == 'talker' and websocket in current_talkers:
             current_talkers.remove(websocket)
-        elif client_type == 'listener' and websocket in current_listeners:
+        elif client_type.startswith('listener') and websocket in current_listeners:
             current_listeners.remove(websocket)
-        print(f"{client_type} disconnected.")
+        print(f"{client_type} disconnected due to: {str(e)}")
+
+    except Exception as e:
+        # Handle other general exceptions
+        print(f"An unexpected error occurred: {str(e)}")
 
 
 def websocket_thread_function():

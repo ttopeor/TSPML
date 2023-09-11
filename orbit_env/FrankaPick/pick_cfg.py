@@ -9,10 +9,11 @@ from omni.isaac.orbit.objects import RigidObjectCfg
 from omni.isaac.orbit.robots.single_arm import SingleArmManipulatorCfg
 from omni.isaac.orbit.utils import configclass
 from omni.isaac.orbit.utils.assets import ISAAC_NUCLEUS_DIR
-from omni.isaac.orbit.actuators.group.actuator_group_cfg import ActuatorControlCfg
+# from omni.isaac.orbit.actuators.group.actuator_group_cfg import ActuatorControlCfg
 from omni.isaac.orbit.actuators.group import ActuatorGroupCfg
 from omni.isaac.orbit.actuators.model import ImplicitActuatorCfg
 from omni.isaac.orbit.actuators.group import ActuatorControlCfg, GripperActuatorGroupCfg
+from omni.isaac.orbit.sensors.camera.camera_cfg import PinholeCameraCfg
 
 from omni.isaac.orbit_envs.isaac_env_cfg import EnvCfg, IsaacEnvCfg, PhysxCfg, SimCfg, ViewerCfg
 
@@ -102,6 +103,18 @@ FRANKA_PANDA_ARM_WITH_PANDA_HAND_CFG = SingleArmManipulatorCfg(
             close_dof_pos=0.0,
         ),
     },
+)
+
+camera_config = PinholeCameraCfg(
+    sensor_tick=0.01,  # 例如每20毫秒一个传感器缓冲
+    data_types=["rgb"],  # 例如启用颜色和深度数据
+    width=640,  # 例如640像素宽
+    height=480,  # 例如480像素高
+    projection_type="pinhole",  # 假设您使用的是针孔投影
+    # semantic_types=["class"],  # 填写您需要的语义类型
+    usd_params=PinholeCameraCfg.UsdCameraCfg(
+        focal_length=18.0  # 假设您要设置的焦距为50.0mm
+    )
 )
 
 @configclass
@@ -286,24 +299,7 @@ class ControlCfg:
     )
 
 
-@configclass
-class CameraCfg:
-    # cam parameters
-    HorizontalApertureAttr = 20.955
-    VerticalApertureAttr = 15.7
-    FocalLengthAttr = 18.8
-    FocusDistanceAttr = 400
 
-    # path
-    camera_prim_path = "/Robot/panda_hand/geometry/realsense/realsense_camera"
-    viewport_name = "viewport"
-
-
-@configclass
-class Ros2Cfg:
-    # path
-    franka_stage_path = "/Robot"
-    graph_path = "/ActionGraph"
 
 ##
 # Environment configuration
@@ -352,6 +348,5 @@ class PickEnvCfg(IsaacEnvCfg):
     control: ControlCfg = ControlCfg()
 
     # camera
-    camera: CameraCfg = CameraCfg()
-    # ros2 setting
-    ros2: Ros2Cfg = Ros2Cfg()
+    camera: camera_config = camera_config
+

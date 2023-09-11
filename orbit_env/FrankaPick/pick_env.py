@@ -14,6 +14,7 @@ import omni.isaac.core.utils.prims as prim_utils
 import omni.isaac.orbit.utils.kit as kit_utils
 from omni.isaac.orbit.objects import RigidObject
 from omni.isaac.orbit.robots.single_arm import SingleArmManipulator
+from omni.isaac.orbit.sensors.camera import Camera
 from omni.isaac.orbit.utils.dict import class_to_dict
 from omni.isaac.orbit.utils.math import quat_inv, quat_mul, random_orientation, sample_uniform, scale_transform
 from omni.isaac.orbit.utils.mdp import ObservationManager, RewardManager
@@ -31,6 +32,7 @@ class PickEnv(IsaacEnv):
         self.cfg = cfg
         # create classes (these are called by the function :meth:`_design_scene`)
         self.robot = SingleArmManipulator(cfg=self.cfg.robot)
+        self.camera = Camera(cfg=self.cfg.camera, device='cuda')
         self.object = RigidObject(cfg=self.cfg.object)
         self.ros_domain_id = 0
         # initialize the base class to setup the scene.
@@ -62,6 +64,7 @@ class PickEnv(IsaacEnv):
         # -- fill up buffers
         self.object.update_buffers(self.dt)
         self.robot.update_buffers(self.dt)
+        # self.camera.update(self.dt)
 
     """
     Implementation specifics.
@@ -88,7 +91,12 @@ class PickEnv(IsaacEnv):
         self.robot.spawn(self.template_env_ns + "/Robot")
         # object
         self.object.spawn(self.template_env_ns + "/Object")
-
+        # camera
+        self.camera.spawn(
+            self.template_env_ns+"/Robot/panda_hand/geometry",
+            translation=(0.05, 0.0, -0.88),
+            orientation=(0, 0.70711, 0.70711, 0.0)
+        )
         # return list of global prims
         return ["/World/defaultGroundPlane"]
 
