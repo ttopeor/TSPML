@@ -24,6 +24,8 @@ simulation_app = SimulationApp(config)
 
 import omni.isaac.orbit_envs  # noqa: F401
 from omni.isaac.orbit_envs.utils import parse_env_cfg
+import omni.isaac.orbit.utils.array as array_utils
+import matplotlib.pyplot as plt
 
 env = None
 current_talkers = []
@@ -111,6 +113,20 @@ async def safe_send(listener, json_data):
     return True
 
 
+def update_plot(ax, observation, env_num):
+    trimmed_tensor = observation["policy"]["camera_raw_output"][env_num]
+    rgb_tensor = trimmed_tensor.view(360, 480, 3)
+    
+    numpy_img = rgb_tensor.cpu().numpy()
+    
+    numpy_img = numpy_img.astype(float) / 255.0
+    
+    if ax.images:
+        ax.images[0].set_data(numpy_img)
+    else:
+        ax.imshow(numpy_img)
+
+
 def main():
     global env, global_actions
 
@@ -131,8 +147,17 @@ def main():
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
 
+    # 开启交互模式
+    plt.ion()
+    # 初次创建图和轴
+    fig, ax = plt.subplots()
+
     while simulation_app.is_running():
-        _, _, _, _ = env.step(global_actions)
+        observation, reward, done, info = env.step(global_actions)
+
+        update_plot(ax, observation, 1)
+        plt.pause(1e-10)
+
         if current_listeners:
             listeners_to_remove = []
 
