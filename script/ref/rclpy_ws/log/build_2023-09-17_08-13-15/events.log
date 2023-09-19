@@ -1,0 +1,449 @@
+[0.000000] (-) TimerEvent: {}
+[0.000071] (rclpy) JobQueued: {'identifier': 'rclpy', 'dependencies': OrderedDict()}
+[0.000085] (rclpy) JobStarted: {'identifier': 'rclpy'}
+[0.006061] (rclpy) JobProgress: {'identifier': 'rclpy', 'progress': 'cmake'}
+[0.006094] (rclpy) Command: {'cmd': ['/usr/bin/cmake', '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/src/rclpy/rclpy', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy'], 'cwd': '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('LANGUAGE', 'en_US:en'), ('USER', 'robot'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/robot'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/rclpy'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/robot/.nvm/versions/node/v18.17.1/bin'), ('NVM_INC', '/home/robot/.nvm/versions/node/v18.17.1/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1743'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('NVM_DIR', '/home/robot/.nvm'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'robot'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'robot'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ISAAC_ROS_WS', '/home/robot/workspaces/isaac_ros-dev/'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/robot/mambaforge/bin:/home/robot/mambaforge/condabin:/home/robot/.nvm/versions/node/v18.17.1/bin:/home/robot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/local/go/bin'), ('SESSION_MANAGER', 'local/yue-lab:@/tmp/.ICE-unix/1721,unix/yue-lab:/tmp/.ICE-unix/1721'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/ca35b1f4_0307_4b1e_9f2a_c6aa0213a963'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.90'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XML_CATALOG_FILES', 'file:///home/robot/mambaforge/etc/xml/catalog file:///etc/xml/catalog'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/robot/mambaforge/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/robot/mambaforge/bin/conda'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('CONDA_PREFIX', '/home/robot/mambaforge'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.078324] (rclpy) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099554] (-) TimerEvent: {}
+[0.127637] (rclpy) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.133249] (rclpy) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.169159] (rclpy) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.172893] (rclpy) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.173047] (rclpy) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.173510] (rclpy) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.175416] (rclpy) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.199680] (-) TimerEvent: {}
+[0.215122] (rclpy) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.219004] (rclpy) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.219085] (rclpy) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.219252] (rclpy) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.220506] (rclpy) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.299863] (-) TimerEvent: {}
+[0.383378] (rclpy) StdoutLine: {'line': b'-- Found Python3: /home/robot/mambaforge/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[0.400133] (-) TimerEvent: {}
+[0.414869] (rclpy) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.423823] (rclpy) StdoutLine: {'line': b'-- Found lifecycle_msgs: 1.2.1 (/opt/ros/humble/share/lifecycle_msgs/cmake)\n'}
+[0.438351] (rclpy) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.440302] (rclpy) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.443904] (rclpy) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.450134] (rclpy) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.458852] (rclpy) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.467003] (rclpy) StdoutLine: {'line': b'-- Found rcl: 5.3.4 (/opt/ros/humble/share/rcl/cmake)\n'}
+[0.500383] (-) TimerEvent: {}
+[0.502374] (rclpy) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.503359] (rclpy) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.3 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.549656] (rclpy) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.561916] (rclpy) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.583559] (rclpy) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.589216] (rclpy) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.600546] (-) TimerEvent: {}
+[0.629766] (rclpy) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.629874] (rclpy) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.666188] (rclpy) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.666941] (rclpy) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.670635] (rclpy) StdoutLine: {'line': b'-- Found rcl_action: 5.3.4 (/opt/ros/humble/share/rcl_action/cmake)\n'}
+[0.700803] (-) TimerEvent: {}
+[0.713392] (rclpy) StdoutLine: {'line': b'-- Found rcl_lifecycle: 5.3.4 (/opt/ros/humble/share/rcl_lifecycle/cmake)\n'}
+[0.801087] (-) TimerEvent: {}
+[0.901449] (-) TimerEvent: {}
+[0.976093] (rclpy) StdoutLine: {'line': b'-- Found Python3: /home/robot/mambaforge/bin/python3.10 (found version "3.10.12") found components: Interpreter Development Development.Module Development.Embed \n'}
+[0.976897] (rclpy) StdoutLine: {'line': b'-- Found pybind11_vendor: 2.4.2 (/opt/ros/humble/share/pybind11_vendor/cmake)\n'}
+[0.994885] (rclpy) StdoutLine: {'line': b'-- Performing Test HAS_FLTO\n'}
+[1.001744] (-) TimerEvent: {}
+[1.069850] (rclpy) StdoutLine: {'line': b'-- Performing Test HAS_FLTO - Success\n'}
+[1.070097] (rclpy) StdoutLine: {'line': b'-- Found pybind11: /usr/include (found version "2.9.1")\n'}
+[1.102012] (-) TimerEvent: {}
+[1.126179] (rclpy) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.184677] (rclpy) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[1.202320] (-) TimerEvent: {}
+[1.302650] (-) TimerEvent: {}
+[1.403060] (-) TimerEvent: {}
+[1.503541] (-) TimerEvent: {}
+[1.603896] (-) TimerEvent: {}
+[1.704324] (-) TimerEvent: {}
+[1.804849] (-) TimerEvent: {}
+[1.905454] (-) TimerEvent: {}
+[2.005759] (-) TimerEvent: {}
+[2.106126] (-) TimerEvent: {}
+[2.206562] (-) TimerEvent: {}
+[2.306923] (-) TimerEvent: {}
+[2.407333] (-) TimerEvent: {}
+[2.507613] (-) TimerEvent: {}
+[2.607916] (-) TimerEvent: {}
+[2.708223] (-) TimerEvent: {}
+[2.808642] (-) TimerEvent: {}
+[2.908926] (-) TimerEvent: {}
+[3.009232] (-) TimerEvent: {}
+[3.109616] (-) TimerEvent: {}
+[3.209996] (-) TimerEvent: {}
+[3.310388] (-) TimerEvent: {}
+[3.410827] (-) TimerEvent: {}
+[3.511227] (-) TimerEvent: {}
+[3.611830] (-) TimerEvent: {}
+[3.712204] (-) TimerEvent: {}
+[3.812601] (-) TimerEvent: {}
+[3.913324] (-) TimerEvent: {}
+[4.013649] (-) TimerEvent: {}
+[4.114031] (-) TimerEvent: {}
+[4.214438] (-) TimerEvent: {}
+[4.314979] (-) TimerEvent: {}
+[4.415405] (-) TimerEvent: {}
+[4.515761] (-) TimerEvent: {}
+[4.615995] (-) TimerEvent: {}
+[4.716289] (-) TimerEvent: {}
+[4.816688] (-) TimerEvent: {}
+[4.917043] (-) TimerEvent: {}
+[5.017379] (-) TimerEvent: {}
+[5.117738] (-) TimerEvent: {}
+[5.218126] (-) TimerEvent: {}
+[5.318493] (-) TimerEvent: {}
+[5.418851] (-) TimerEvent: {}
+[5.519220] (-) TimerEvent: {}
+[5.619603] (-) TimerEvent: {}
+[5.719897] (-) TimerEvent: {}
+[5.820312] (-) TimerEvent: {}
+[5.920671] (-) TimerEvent: {}
+[6.021035] (-) TimerEvent: {}
+[6.121468] (-) TimerEvent: {}
+[6.221854] (-) TimerEvent: {}
+[6.322138] (-) TimerEvent: {}
+[6.422531] (-) TimerEvent: {}
+[6.523144] (-) TimerEvent: {}
+[6.623672] (-) TimerEvent: {}
+[6.724152] (-) TimerEvent: {}
+[6.824572] (-) TimerEvent: {}
+[6.925051] (-) TimerEvent: {}
+[7.025441] (-) TimerEvent: {}
+[7.125972] (-) TimerEvent: {}
+[7.226365] (-) TimerEvent: {}
+[7.288075] (rclpy) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[7.290668] (rclpy) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[7.290807] (rclpy) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[7.291144] (rclpy) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[7.292057] (rclpy) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[7.292521] (rclpy) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[7.294936] (rclpy) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[7.295028] (rclpy) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[7.295420] (rclpy) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[7.296109] (rclpy) StdoutLine: {'line': b'-- Configuring done\n'}
+[7.309687] (rclpy) StderrLine: {'line': b'\x1b[33mCMake Warning at /usr/share/cmake-3.22/Modules/FindPython/Support.cmake:3330 (add_library):\n'}
+[7.309757] (rclpy) StderrLine: {'line': b'  Cannot generate a safe runtime search path for target _rclpy_pybind11\n'}
+[7.309788] (rclpy) StderrLine: {'line': b'  because files in some directories may conflict with libraries in implicit\n'}
+[7.309812] (rclpy) StderrLine: {'line': b'  directories:\n'}
+[7.309834] (rclpy) StderrLine: {'line': b'\n'}
+[7.309857] (rclpy) StderrLine: {'line': b'    runtime library [libpython3.10.so.1.0] in /usr/lib/x86_64-linux-gnu may be hidden by files in:\n'}
+[7.309881] (rclpy) StderrLine: {'line': b'      /home/robot/mambaforge/lib\n'}
+[7.309903] (rclpy) StderrLine: {'line': b'\n'}
+[7.309924] (rclpy) StderrLine: {'line': b'  Some of these libraries may not be found correctly.\n'}
+[7.309947] (rclpy) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[7.309969] (rclpy) StderrLine: {'line': b'  /usr/share/cmake-3.22/Modules/FindPython3.cmake:494 (__Python3_add_library)\n'}
+[7.309990] (rclpy) StderrLine: {'line': b'  /usr/lib/cmake/pybind11/pybind11NewTools.cmake:207 (python3_add_library)\n'}
+[7.310011] (rclpy) StderrLine: {'line': b'  CMakeLists.txt:73 (pybind11_add_module)\n'}
+[7.310032] (rclpy) StderrLine: {'line': b'\n'}
+[7.310053] (rclpy) StderrLine: {'line': b'\x1b[0m\n'}
+[7.312562] (rclpy) StdoutLine: {'line': b'-- Generating done\n'}
+[7.313581] (rclpy) StdoutLine: {'line': b'-- Build files have been written to: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy\n'}
+[7.320320] (rclpy) CommandEnded: {'returncode': 0}
+[7.320527] (rclpy) JobProgress: {'identifier': 'rclpy', 'progress': 'build'}
+[7.320540] (rclpy) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy', '--', '-j20', '-l20'], 'cwd': '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('LANGUAGE', 'en_US:en'), ('USER', 'robot'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/robot'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/rclpy'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/robot/.nvm/versions/node/v18.17.1/bin'), ('NVM_INC', '/home/robot/.nvm/versions/node/v18.17.1/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1743'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('NVM_DIR', '/home/robot/.nvm'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'robot'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'robot'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ISAAC_ROS_WS', '/home/robot/workspaces/isaac_ros-dev/'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/robot/mambaforge/bin:/home/robot/mambaforge/condabin:/home/robot/.nvm/versions/node/v18.17.1/bin:/home/robot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/local/go/bin'), ('SESSION_MANAGER', 'local/yue-lab:@/tmp/.ICE-unix/1721,unix/yue-lab:/tmp/.ICE-unix/1721'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/ca35b1f4_0307_4b1e_9f2a_c6aa0213a963'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.90'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XML_CATALOG_FILES', 'file:///home/robot/mambaforge/etc/xml/catalog file:///etc/xml/catalog'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/robot/mambaforge/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/robot/mambaforge/bin/conda'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('CONDA_PREFIX', '/home/robot/mambaforge'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[7.326581] (-) TimerEvent: {}
+[7.345620] (rclpy) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[7.346115] (rclpy) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/_rclpy_logging.cpp.o\x1b[0m\n'}
+[7.346405] (rclpy) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/_rclpy_pybind11.cpp.o\x1b[0m\n'}
+[7.347490] (rclpy) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/destroyable.cpp.o\x1b[0m\n'}
+[7.348058] (rclpy) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/action_client.cpp.o\x1b[0m\n'}
+[7.348412] (rclpy) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/context.cpp.o\x1b[0m\n'}
+[7.348829] (rclpy) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[7.349078] (rclpy) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/names.cpp.o\x1b[0m\n'}
+[7.349201] (rclpy) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/duration.cpp.o\x1b[0m\n'}
+[7.349302] (rclpy) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/graph.cpp.o\x1b[0m\n'}
+[7.349349] (rclpy) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/action_server.cpp.o\x1b[0m\n'}
+[7.349505] (rclpy) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/clock.cpp.o\x1b[0m\n'}
+[7.349606] (rclpy) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/guard_condition.cpp.o\x1b[0m\n'}
+[7.350870] (rclpy) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/action_goal_handle.cpp.o\x1b[0m\n'}
+[7.351067] (rclpy) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/client.cpp.o\x1b[0m\n'}
+[7.351179] (rclpy) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/exceptions.cpp.o\x1b[0m\n'}
+[7.351384] (rclpy) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/clock_event.cpp.o\x1b[0m\n'}
+[7.351488] (rclpy) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/lifecycle.cpp.o\x1b[0m\n'}
+[7.351965] (rclpy) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/logging.cpp.o\x1b[0m\n'}
+[7.355044] (rclpy) StdoutLine: {'line': b'[ 51%] Built target ament_cmake_python_symlink_rclpy\n'}
+[7.362880] (rclpy) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/node.cpp.o\x1b[0m\n'}
+[7.426693] (-) TimerEvent: {}
+[7.526961] (-) TimerEvent: {}
+[7.568451] (rclpy) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/publisher.cpp.o\x1b[0m\n'}
+[7.627128] (-) TimerEvent: {}
+[7.727588] (-) TimerEvent: {}
+[7.828031] (-) TimerEvent: {}
+[7.928473] (-) TimerEvent: {}
+[8.028923] (-) TimerEvent: {}
+[8.130444] (-) TimerEvent: {}
+[8.230839] (-) TimerEvent: {}
+[8.256034] (rclpy) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[8.330999] (-) TimerEvent: {}
+[8.423004] (rclpy) StdoutLine: {'line': b'[ 59%] Built target gtest_main\n'}
+[8.431165] (-) TimerEvent: {}
+[8.531669] (-) TimerEvent: {}
+[8.594879] (rclpy) StdoutLine: {'line': b'running egg_info\n'}
+[8.596018] (rclpy) StdoutLine: {'line': b'creating rclpy.egg-info\n'}
+[8.603048] (rclpy) StdoutLine: {'line': b'writing rclpy.egg-info/PKG-INFO\n'}
+[8.603353] (rclpy) StdoutLine: {'line': b'writing dependency_links to rclpy.egg-info/dependency_links.txt\n'}
+[8.603599] (rclpy) StdoutLine: {'line': b'writing top-level names to rclpy.egg-info/top_level.txt\n'}
+[8.603736] (rclpy) StdoutLine: {'line': b"writing manifest file 'rclpy.egg-info/SOURCES.txt'\n"}
+[8.626717] (rclpy) StdoutLine: {'line': b"reading manifest file 'rclpy.egg-info/SOURCES.txt'\n"}
+[8.627713] (rclpy) StdoutLine: {'line': b"writing manifest file 'rclpy.egg-info/SOURCES.txt'\n"}
+[8.631803] (-) TimerEvent: {}
+[8.691495] (rclpy) StdoutLine: {'line': b'[ 59%] Built target ament_cmake_python_build_rclpy_egg\n'}
+[8.700602] (rclpy) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/qos.cpp.o\x1b[0m\n'}
+[8.731928] (-) TimerEvent: {}
+[8.832315] (-) TimerEvent: {}
+[8.932732] (-) TimerEvent: {}
+[8.946494] (rclpy) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/qos_event.cpp.o\x1b[0m\n'}
+[8.963670] (rclpy) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/serialization.cpp.o\x1b[0m\n'}
+[9.032877] (-) TimerEvent: {}
+[9.133287] (-) TimerEvent: {}
+[9.233706] (-) TimerEvent: {}
+[9.334113] (-) TimerEvent: {}
+[9.412998] (rclpy) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/service.cpp.o\x1b[0m\n'}
+[9.434270] (-) TimerEvent: {}
+[9.460219] (rclpy) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/service_info.cpp.o\x1b[0m\n'}
+[9.534411] (-) TimerEvent: {}
+[9.634803] (-) TimerEvent: {}
+[9.692878] (rclpy) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/signal_handler.cpp.o\x1b[0m\n'}
+[9.702425] (rclpy) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/subscription.cpp.o\x1b[0m\n'}
+[9.734958] (-) TimerEvent: {}
+[9.759179] (rclpy) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/timer.cpp.o\x1b[0m\n'}
+[9.759443] (rclpy) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/time_point.cpp.o\x1b[0m\n'}
+[9.824309] (rclpy) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/utils.cpp.o\x1b[0m\n'}
+[9.832404] (rclpy) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/wait_set.cpp.o\x1b[0m\n'}
+[9.835084] (-) TimerEvent: {}
+[9.935424] (-) TimerEvent: {}
+[10.035779] (-) TimerEvent: {}
+[10.136161] (-) TimerEvent: {}
+[10.236579] (-) TimerEvent: {}
+[10.336960] (-) TimerEvent: {}
+[10.437350] (-) TimerEvent: {}
+[10.537768] (-) TimerEvent: {}
+[10.638293] (-) TimerEvent: {}
+[10.666503] (rclpy) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[10.737986] (rclpy) StdoutLine: {'line': b'[ 91%] Built target gtest\n'}
+[10.738374] (-) TimerEvent: {}
+[10.755900] (rclpy) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding CXX object CMakeFiles/test_python_allocator.dir/test/test_python_allocator.cpp.o\x1b[0m\n'}
+[10.838562] (-) TimerEvent: {}
+[10.939187] (-) TimerEvent: {}
+[11.039528] (-) TimerEvent: {}
+[11.139871] (-) TimerEvent: {}
+[11.240201] (-) TimerEvent: {}
+[11.340517] (-) TimerEvent: {}
+[11.440863] (-) TimerEvent: {}
+[11.541280] (-) TimerEvent: {}
+[11.641613] (-) TimerEvent: {}
+[11.741920] (-) TimerEvent: {}
+[11.842494] (-) TimerEvent: {}
+[11.870595] (rclpy) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking CXX shared library test_rclpy/_rclpy_pybind11.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[11.942753] (-) TimerEvent: {}
+[12.043171] (-) TimerEvent: {}
+[12.143448] (-) TimerEvent: {}
+[12.243717] (-) TimerEvent: {}
+[12.344031] (-) TimerEvent: {}
+[12.444396] (-) TimerEvent: {}
+[12.544709] (-) TimerEvent: {}
+[12.623926] (rclpy) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable test_python_allocator\x1b[0m\n'}
+[12.644872] (-) TimerEvent: {}
+[12.722228] (rclpy) StdoutLine: {'line': b'[100%] Built target test_python_allocator\n'}
+[12.745103] (-) TimerEvent: {}
+[12.845472] (-) TimerEvent: {}
+[12.945837] (-) TimerEvent: {}
+[13.046102] (rclpy) StderrLine: {'line': b'lto-wrapper: warning: using serial compilation of 3 LTRANS jobs\n'}
+[13.046226] (-) TimerEvent: {}
+[13.146601] (-) TimerEvent: {}
+[13.246999] (-) TimerEvent: {}
+[13.347406] (-) TimerEvent: {}
+[13.447702] (-) TimerEvent: {}
+[13.548008] (-) TimerEvent: {}
+[13.648322] (-) TimerEvent: {}
+[13.748762] (-) TimerEvent: {}
+[13.849040] (-) TimerEvent: {}
+[13.949602] (-) TimerEvent: {}
+[14.049943] (-) TimerEvent: {}
+[14.150325] (-) TimerEvent: {}
+[14.250603] (-) TimerEvent: {}
+[14.351101] (-) TimerEvent: {}
+[14.451490] (-) TimerEvent: {}
+[14.552067] (-) TimerEvent: {}
+[14.652396] (-) TimerEvent: {}
+[14.752753] (-) TimerEvent: {}
+[14.853091] (-) TimerEvent: {}
+[14.953670] (-) TimerEvent: {}
+[15.053959] (-) TimerEvent: {}
+[15.154505] (-) TimerEvent: {}
+[15.254785] (-) TimerEvent: {}
+[15.355108] (-) TimerEvent: {}
+[15.455398] (-) TimerEvent: {}
+[15.555602] (-) TimerEvent: {}
+[15.655879] (-) TimerEvent: {}
+[15.756102] (-) TimerEvent: {}
+[15.856326] (-) TimerEvent: {}
+[15.956570] (-) TimerEvent: {}
+[16.056810] (-) TimerEvent: {}
+[16.157049] (-) TimerEvent: {}
+[16.257330] (-) TimerEvent: {}
+[16.357650] (-) TimerEvent: {}
+[16.457903] (-) TimerEvent: {}
+[16.558342] (-) TimerEvent: {}
+[16.658688] (-) TimerEvent: {}
+[16.759087] (-) TimerEvent: {}
+[16.859427] (-) TimerEvent: {}
+[16.959808] (-) TimerEvent: {}
+[17.060085] (-) TimerEvent: {}
+[17.160396] (-) TimerEvent: {}
+[17.260728] (-) TimerEvent: {}
+[17.361074] (-) TimerEvent: {}
+[17.461419] (-) TimerEvent: {}
+[17.561884] (-) TimerEvent: {}
+[17.662219] (-) TimerEvent: {}
+[17.762701] (-) TimerEvent: {}
+[17.863080] (-) TimerEvent: {}
+[17.963567] (-) TimerEvent: {}
+[18.063870] (-) TimerEvent: {}
+[18.164386] (-) TimerEvent: {}
+[18.264734] (-) TimerEvent: {}
+[18.365206] (-) TimerEvent: {}
+[18.405329] (rclpy) StdoutLine: {'line': b'[100%] Built target _rclpy_pybind11\n'}
+[18.413836] (rclpy) CommandEnded: {'returncode': 0}
+[18.453777] (rclpy) JobProgress: {'identifier': 'rclpy', 'progress': 'install'}
+[18.458095] (rclpy) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy'], 'cwd': '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('LANGUAGE', 'en_US:en'), ('USER', 'robot'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/robot'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/rclpy'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/robot/.nvm/versions/node/v18.17.1/bin'), ('NVM_INC', '/home/robot/.nvm/versions/node/v18.17.1/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1743'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('NVM_DIR', '/home/robot/.nvm'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'robot'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'robot'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ISAAC_ROS_WS', '/home/robot/workspaces/isaac_ros-dev/'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/robot/mambaforge/bin:/home/robot/mambaforge/condabin:/home/robot/.nvm/versions/node/v18.17.1/bin:/home/robot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/local/go/bin'), ('SESSION_MANAGER', 'local/yue-lab:@/tmp/.ICE-unix/1721,unix/yue-lab:/tmp/.ICE-unix/1721'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/ca35b1f4_0307_4b1e_9f2a_c6aa0213a963'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.90'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XML_CATALOG_FILES', 'file:///home/robot/mambaforge/etc/xml/catalog file:///etc/xml/catalog'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/robot/mambaforge/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/robot/mambaforge/bin/conda'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('CONDA_PREFIX', '/home/robot/mambaforge'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[18.461915] (rclpy) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[18.462102] (rclpy) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[18.462264] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/pythonpath.sh\n'}
+[18.465313] (-) TimerEvent: {}
+[18.466313] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/pythonpath.dsv\n'}
+[18.470487] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy-3.3.9-py3.10.egg-info/PKG-INFO\n'}
+[18.474410] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy-3.3.9-py3.10.egg-info/SOURCES.txt\n'}
+[18.478270] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy-3.3.9-py3.10.egg-info/dependency_links.txt\n'}
+[18.482087] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy-3.3.9-py3.10.egg-info/top_level.txt\n'}
+[18.486327] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/__init__.py\n'}
+[18.490331] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/__init__.py\n'}
+[18.494088] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/client.py\n'}
+[18.498092] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/graph.py\n'}
+[18.501903] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/server.py\n'}
+[18.505913] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/callback_groups.py\n'}
+[18.509824] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/client.py\n'}
+[18.513494] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/clock.py\n'}
+[18.517279] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/constants.py\n'}
+[18.521076] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/context.py\n'}
+[18.524847] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/duration.py\n'}
+[18.528551] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/exceptions.py\n'}
+[18.532236] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/executors.py\n'}
+[18.536021] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/expand_topic_name.py\n'}
+[18.539821] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/guard_condition.py\n'}
+[18.543766] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/__init__.py\n'}
+[18.547693] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/implementation_singleton.py\n'}
+[18.551446] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/logging_severity.py\n'}
+[18.555343] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/rcutils_logger.py\n'}
+[18.559213] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/__init__.py\n'}
+[18.562812] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/managed_entity.py\n'}
+[18.565467] (-) TimerEvent: {}
+[18.566572] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/node.py\n'}
+[18.570415] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/publisher.py\n'}
+[18.574108] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/logging.py\n'}
+[18.577764] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/node.py\n'}
+[18.581396] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/parameter.py\n'}
+[18.585600] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/parameter_service.py\n'}
+[18.589522] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/publisher.py\n'}
+[18.593285] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/qos.py\n'}
+[18.597185] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/qos_event.py\n'}
+[18.601114] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/qos_overriding_options.py\n'}
+[18.604816] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/serialization.py\n'}
+[18.608796] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/service.py\n'}
+[18.612522] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/signals.py\n'}
+[18.616377] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/subscription.py\n'}
+[18.620141] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/task.py\n'}
+[18.624295] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/time.py\n'}
+[18.628275] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/time_source.py\n'}
+[18.632278] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/timer.py\n'}
+[18.636210] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/topic_endpoint_info.py\n'}
+[18.639871] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/topic_or_service_is_hidden.py\n'}
+[18.643706] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/type_support.py\n'}
+[18.647590] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/utilities.py\n'}
+[18.651429] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_full_topic_name.py\n'}
+[18.655326] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_namespace.py\n'}
+[18.659111] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_node_name.py\n'}
+[18.663008] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_parameter_name.py\n'}
+[18.665653] (-) TimerEvent: {}
+[18.666843] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_topic_name.py\n'}
+[18.670916] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/waitable.py\n'}
+[18.675074] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/_rclpy_pybind11.cpython-310-x86_64-linux-gnu.so\n'}
+[18.679047] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/library_path.sh\n'}
+[18.682959] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/library_path.dsv\n'}
+[18.686882] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/ament_index/resource_index/package_run_dependencies/rclpy\n'}
+[18.690845] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/ament_index/resource_index/parent_prefix_path/rclpy\n'}
+[18.694756] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/ament_prefix_path.sh\n'}
+[18.698659] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/ament_prefix_path.dsv\n'}
+[18.702502] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/path.sh\n'}
+[18.706530] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/path.dsv\n'}
+[18.710483] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/local_setup.bash\n'}
+[18.714435] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/local_setup.sh\n'}
+[18.718319] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/local_setup.zsh\n'}
+[18.722163] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/local_setup.dsv\n'}
+[18.726441] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/package.dsv\n'}
+[18.730692] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/ament_index/resource_index/packages/rclpy\n'}
+[18.734877] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/cmake/rclpyConfig.cmake\n'}
+[18.738702] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/cmake/rclpyConfig-version.cmake\n'}
+[18.742666] (rclpy) StdoutLine: {'line': b'-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/package.xml\n'}
+[18.765881] (-) TimerEvent: {}
+[18.785770] (rclpy) StdoutLine: {'line': b"Listing '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy'...\n"}
+[18.785883] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/__init__.py'...\n"}
+[18.785913] (rclpy) StdoutLine: {'line': b"Listing '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action'...\n"}
+[18.785938] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/__init__.py'...\n"}
+[18.785962] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/client.py'...\n"}
+[18.785985] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/graph.py'...\n"}
+[18.786008] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/server.py'...\n"}
+[18.786030] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/callback_groups.py'...\n"}
+[18.786051] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/client.py'...\n"}
+[18.786073] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/clock.py'...\n"}
+[18.786094] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/constants.py'...\n"}
+[18.786115] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/context.py'...\n"}
+[18.786137] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/duration.py'...\n"}
+[18.786158] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/exceptions.py'...\n"}
+[18.786179] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/executors.py'...\n"}
+[18.786200] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/expand_topic_name.py'...\n"}
+[18.786222] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/guard_condition.py'...\n"}
+[18.786243] (rclpy) StdoutLine: {'line': b"Listing '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl'...\n"}
+[18.786264] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/__init__.py'...\n"}
+[18.786288] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/implementation_singleton.py'...\n"}
+[18.786309] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/logging_severity.py'...\n"}
+[18.786331] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/rcutils_logger.py'...\n"}
+[18.786351] (rclpy) StdoutLine: {'line': b"Listing '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle'...\n"}
+[18.786376] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/__init__.py'...\n"}
+[18.786396] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/managed_entity.py'...\n"}
+[18.786419] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/node.py'...\n"}
+[18.786441] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/publisher.py'...\n"}
+[18.786462] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/logging.py'...\n"}
+[18.786484] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/node.py'...\n"}
+[18.786505] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/parameter.py'...\n"}
+[18.786526] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/parameter_service.py'...\n"}
+[18.786547] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/publisher.py'...\n"}
+[18.786569] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/qos.py'...\n"}
+[18.786590] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/qos_event.py'...\n"}
+[18.786611] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/qos_overriding_options.py'...\n"}
+[18.786632] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/serialization.py'...\n"}
+[18.786653] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/service.py'...\n"}
+[18.786674] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/signals.py'...\n"}
+[18.786694] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/subscription.py'...\n"}
+[18.786715] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/task.py'...\n"}
+[18.786736] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/time.py'...\n"}
+[18.786757] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/time_source.py'...\n"}
+[18.786779] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/timer.py'...\n"}
+[18.786800] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/topic_endpoint_info.py'...\n"}
+[18.786821] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/topic_or_service_is_hidden.py'...\n"}
+[18.786842] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/type_support.py'...\n"}
+[18.786864] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/utilities.py'...\n"}
+[18.786884] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_full_topic_name.py'...\n"}
+[18.786905] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_namespace.py'...\n"}
+[18.786927] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_node_name.py'...\n"}
+[18.786948] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_parameter_name.py'...\n"}
+[18.786970] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_topic_name.py'...\n"}
+[18.786991] (rclpy) StdoutLine: {'line': b"Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/waitable.py'...\n"}
+[18.789937] (rclpy) CommandEnded: {'returncode': 0}
+[18.845630] (rclpy) JobEnded: {'identifier': 'rclpy', 'rc': 0}
+[18.846087] (-) EventReactorShutdown: {}

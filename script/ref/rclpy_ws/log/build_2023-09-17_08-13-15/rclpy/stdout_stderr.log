@@ -1,0 +1,248 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /home/robot/mambaforge/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found lifecycle_msgs: 1.2.1 (/opt/ros/humble/share/lifecycle_msgs/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rcl: 5.3.4 (/opt/ros/humble/share/rcl/cmake)
+-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.3 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found rcl_action: 5.3.4 (/opt/ros/humble/share/rcl_action/cmake)
+-- Found rcl_lifecycle: 5.3.4 (/opt/ros/humble/share/rcl_lifecycle/cmake)
+-- Found Python3: /home/robot/mambaforge/bin/python3.10 (found version "3.10.12") found components: Interpreter Development Development.Module Development.Embed 
+-- Found pybind11_vendor: 2.4.2 (/opt/ros/humble/share/pybind11_vendor/cmake)
+-- Performing Test HAS_FLTO
+-- Performing Test HAS_FLTO - Success
+-- Found pybind11: /usr/include (found version "2.9.1")
+-- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+[33mCMake Warning at /usr/share/cmake-3.22/Modules/FindPython/Support.cmake:3330 (add_library):
+  Cannot generate a safe runtime search path for target _rclpy_pybind11
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libpython3.10.so.1.0] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+      /home/robot/mambaforge/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  /usr/share/cmake-3.22/Modules/FindPython3.cmake:494 (__Python3_add_library)
+  /usr/lib/cmake/pybind11/pybind11NewTools.cmake:207 (python3_add_library)
+  CMakeLists.txt:73 (pybind11_add_module)
+
+[0m
+-- Generating done
+-- Build files have been written to: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/build/rclpy
+[  2%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[  5%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/_rclpy_logging.cpp.o[0m
+[  8%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/_rclpy_pybind11.cpp.o[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/destroyable.cpp.o[0m
+[ 13%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/action_client.cpp.o[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/context.cpp.o[0m
+[ 18%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/names.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/duration.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/graph.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/action_server.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/clock.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/guard_condition.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/action_goal_handle.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/client.cpp.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/exceptions.cpp.o[0m
+[ 48%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/clock_event.cpp.o[0m
+[ 48%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/lifecycle.cpp.o[0m
+[ 51%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/logging.cpp.o[0m
+[ 51%] Built target ament_cmake_python_symlink_rclpy
+[ 54%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/node.cpp.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/publisher.cpp.o[0m
+[ 59%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[ 59%] Built target gtest_main
+running egg_info
+creating rclpy.egg-info
+writing rclpy.egg-info/PKG-INFO
+writing dependency_links to rclpy.egg-info/dependency_links.txt
+writing top-level names to rclpy.egg-info/top_level.txt
+writing manifest file 'rclpy.egg-info/SOURCES.txt'
+reading manifest file 'rclpy.egg-info/SOURCES.txt'
+writing manifest file 'rclpy.egg-info/SOURCES.txt'
+[ 59%] Built target ament_cmake_python_build_rclpy_egg
+[ 62%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/qos.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/qos_event.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/serialization.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/service.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/service_info.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/signal_handler.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/subscription.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/timer.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/time_point.cpp.o[0m
+[ 86%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/utils.cpp.o[0m
+[ 89%] [32mBuilding CXX object CMakeFiles/_rclpy_pybind11.dir/src/rclpy/wait_set.cpp.o[0m
+[ 91%] [32m[1mLinking CXX static library libgtest.a[0m
+[ 91%] Built target gtest
+[ 94%] [32mBuilding CXX object CMakeFiles/test_python_allocator.dir/test/test_python_allocator.cpp.o[0m
+[ 97%] [32m[1mLinking CXX shared library test_rclpy/_rclpy_pybind11.cpython-310-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking CXX executable test_python_allocator[0m
+[100%] Built target test_python_allocator
+lto-wrapper: warning: using serial compilation of 3 LTRANS jobs
+[100%] Built target _rclpy_pybind11
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/pythonpath.sh
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/pythonpath.dsv
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy-3.3.9-py3.10.egg-info/PKG-INFO
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy-3.3.9-py3.10.egg-info/SOURCES.txt
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy-3.3.9-py3.10.egg-info/dependency_links.txt
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy-3.3.9-py3.10.egg-info/top_level.txt
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/__init__.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/__init__.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/client.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/graph.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/server.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/callback_groups.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/client.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/clock.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/constants.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/context.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/duration.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/exceptions.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/executors.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/expand_topic_name.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/guard_condition.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/__init__.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/implementation_singleton.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/logging_severity.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/rcutils_logger.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/__init__.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/managed_entity.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/node.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/publisher.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/logging.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/node.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/parameter.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/parameter_service.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/publisher.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/qos.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/qos_event.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/qos_overriding_options.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/serialization.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/service.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/signals.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/subscription.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/task.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/time.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/time_source.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/timer.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/topic_endpoint_info.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/topic_or_service_is_hidden.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/type_support.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/utilities.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_full_topic_name.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_namespace.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_node_name.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_parameter_name.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_topic_name.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/waitable.py
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/_rclpy_pybind11.cpython-310-x86_64-linux-gnu.so
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/library_path.sh
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/library_path.dsv
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/ament_index/resource_index/package_run_dependencies/rclpy
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/ament_index/resource_index/parent_prefix_path/rclpy
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/ament_prefix_path.sh
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/ament_prefix_path.dsv
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/path.sh
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/environment/path.dsv
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/local_setup.bash
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/local_setup.sh
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/local_setup.zsh
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/local_setup.dsv
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/package.dsv
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/ament_index/resource_index/packages/rclpy
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/cmake/rclpyConfig.cmake
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/cmake/rclpyConfig-version.cmake
+-- Symlinking: /home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/share/rclpy/package.xml
+Listing '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/__init__.py'...
+Listing '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/__init__.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/client.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/graph.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/action/server.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/callback_groups.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/client.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/clock.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/constants.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/context.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/duration.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/exceptions.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/executors.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/expand_topic_name.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/guard_condition.py'...
+Listing '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/__init__.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/implementation_singleton.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/logging_severity.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/impl/rcutils_logger.py'...
+Listing '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/__init__.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/managed_entity.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/node.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/lifecycle/publisher.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/logging.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/node.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/parameter.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/parameter_service.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/publisher.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/qos.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/qos_event.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/qos_overriding_options.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/serialization.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/service.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/signals.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/subscription.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/task.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/time.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/time_source.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/timer.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/topic_endpoint_info.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/topic_or_service_is_hidden.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/type_support.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/utilities.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_full_topic_name.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_namespace.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_node_name.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_parameter_name.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/validate_topic_name.py'...
+Compiling '/home/robot/Desktop/workspace/TSPML/script/ref/rclpy_ws/install/rclpy/lib/python3.10/site-packages/rclpy/waitable.py'...

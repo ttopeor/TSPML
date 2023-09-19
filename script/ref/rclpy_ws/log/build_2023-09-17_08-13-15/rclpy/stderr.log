@@ -1,0 +1,16 @@
+[33mCMake Warning at /usr/share/cmake-3.22/Modules/FindPython/Support.cmake:3330 (add_library):
+  Cannot generate a safe runtime search path for target _rclpy_pybind11
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libpython3.10.so.1.0] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+      /home/robot/mambaforge/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  /usr/share/cmake-3.22/Modules/FindPython3.cmake:494 (__Python3_add_library)
+  /usr/lib/cmake/pybind11/pybind11NewTools.cmake:207 (python3_add_library)
+  CMakeLists.txt:73 (pybind11_add_module)
+
+[0m
+lto-wrapper: warning: using serial compilation of 3 LTRANS jobs
