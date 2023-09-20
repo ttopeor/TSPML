@@ -117,8 +117,8 @@ class PickEnv(IsaacEnv):
     def _reset_idx(self, env_ids: VecEnvIndices):
         # randomize the MDP
         # -- robot DOF state
-        # dof_pos, dof_vel = self.robot.get_default_dof_state(env_ids=env_ids)
-        # self.robot.set_dof_state(dof_pos, dof_vel, env_ids=env_ids)
+        dof_pos, dof_vel = self.robot.get_default_dof_state(env_ids=env_ids)
+        self.robot.set_dof_state(dof_pos, dof_vel, env_ids=env_ids)
         # -- object pose
         self._randomize_object_initial_pose(env_ids=env_ids, cfg=self.cfg.randomization.object_initial_pose)
         # -- reset Camera
