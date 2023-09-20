@@ -319,10 +319,17 @@ def main():
             # send out joint states to websocket
             listener_server_spin(loop, teacher_obs)
 
-            # get action_raw from websocket
+            # reset global_action
+            reset_action = torch.tensor([0., -0.7850000262260437, 0., -2.3559999465942383, 0., 1.57079632679, 0.7850000262260437, 1.], device=env.device)
+            reset_buf_np = env.reset_buf.cpu().numpy()
+            indices = np.where(reset_buf_np == 1)[0]
+
+            for index in indices:
+                global_actions[index] = reset_action
+
             # compute actions based on environment offsets
             actions = pre_process_actions(offsets, global_actions)
-            
+
             # -- obs
             for key, value in obs.items():
                 collector_interface.add(f"obs/{key}", value)
