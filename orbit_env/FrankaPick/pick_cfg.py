@@ -14,6 +14,7 @@ from omni.isaac.orbit.actuators.group import ActuatorControlCfg, GripperActuator
 from omni.isaac.orbit.sensors.camera.camera_cfg import PinholeCameraCfg
 
 from omni.isaac.orbit_envs.isaac_env_cfg import EnvCfg, IsaacEnvCfg, PhysxCfg, SimCfg, ViewerCfg
+from omni.isaac.orbit.controllers.differential_inverse_kinematics import DifferentialInverseKinematicsCfg
 
 TSPML_DIR = "/home/robot/Desktop/workspace/TSPML"
 FRANKA_DIR = f"{TSPML_DIR}/Props/Franka/franka_alt_fingers.usd"
@@ -52,7 +53,7 @@ FRANKA_PANDA_ARM_WITH_PANDA_HAND_CFG = SingleArmManipulatorCfg(
         dof_vel={".*": 0.0},
     ),
     ee_info=SingleArmManipulatorCfg.EndEffectorFrameCfg(
-        body_name="panda_hand", pos_offset=(0.0, 0.0, 0.1034), rot_offset=(1.0, 0.0, 0.0, 0.0)
+        body_name="panda_hand", pos_offset=(0.0, 0.0, 0.0), rot_offset=(1.0, 0.0, 0.0, 0.0)
     ),
     rigid_props=SingleArmManipulatorCfg.RigidBodyPropertiesCfg(
         max_depenetration_velocity=5.0,
@@ -207,13 +208,19 @@ class ObservationsCfg:
         arm_actions = {"scale": 1.0}
         tool_actions = {"scale": 1.0}
         # camera
-        camera_raw_output_normalized = {"scale": 1.0}
+        # camera_raw_output_normalized = {"scale": 1.0}
+        # camera_RGB = {"scale": 1.0}
+
+    @configclass
+    class RGBViewsCfg:
+        camera_RGB = {}
 
     # global observation settings
-    return_dict_obs_in_group = False
+    return_dict_obs_in_group = True
     """Whether to return observations as dictionary or flattened vector within groups."""
     # observation groups
     policy: PolicyCfg = PolicyCfg()
+    RGB_views: RGBViewsCfg = RGBViewsCfg()
 
 
 @configclass
@@ -253,6 +260,13 @@ class ControlCfg:
     # decimation: Number of control action updates @ sim dt per policy dt
     decimation = 2
 
+    # configuration loaded when control_type == "inverse_kinematics"
+    inverse_kinematics: DifferentialInverseKinematicsCfg = DifferentialInverseKinematicsCfg(
+        command_type="pose_rel",
+        ik_method="dls",
+        position_command_scale=(0.1, 0.1, 0.1),
+        rotation_command_scale=(0.1, 0.1, 0.1),
+    )
 
 @configclass
 class ActionCfg:
@@ -267,7 +281,7 @@ class ActionCfg:
 class PickEnvCfg(IsaacEnvCfg):
 
     # General Settings
-    env: EnvCfg = EnvCfg(num_envs=4096, env_spacing=2.5, episode_length_s=5.0)
+    env: EnvCfg = EnvCfg(num_envs=4096, env_spacing=2.5, episode_length_s=10.0)
     viewer: ViewerCfg = ViewerCfg(debug_vis=True, eye=(7.5, 7.5, 7.5), lookat=(0.0, 0.0, 0.0))
     # Physics settings
     sim: SimCfg = SimCfg(

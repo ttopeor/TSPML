@@ -30,8 +30,13 @@ if __name__ == "__main__":
     args_cli = parser.parse_args()
 
     # open specified file
-    with h5py.File(args_cli.file, "r") as f:
+    #with h5py.File(args_cli.file, "r") as f:
         # print name of the file first
-        print(f)
+    #    print(f)
         # print contents of file
-        check_group(f["data"], 1)
+    #    check_group(f["data"], 1)
+    
+    with h5py.File(args_cli.file, 'r') as f:
+        print(list(f.keys()))  # 打印文件的顶级键
+        if 'mask' in f:
+            print(list(f['mask'].keys()))  # 如果存在mask，打印其子键

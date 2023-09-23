@@ -15,7 +15,7 @@ parser.add_argument("--headless", action="store_true", default=False, help="Forc
 parser.add_argument("--cpu", action="store_true", default=False, help="Use CPU pipeline.")
 parser.add_argument("--num_envs", type=int, default=1, help="Number of environments to simulate.")
 parser.add_argument("--task", type=str, default="Isaac-Pick-Franka-v0", help="Name of the task.")
-parser.add_argument("--num_demos", type=int, default=1024, help="Number of episodes to store in the dataset.")
+parser.add_argument("--num_demos", type=int, default=512, help="Number of episodes to store in the dataset.")
 parser.add_argument("--filename", type=str, default="hdf_dataset", help="Basename of output file.")
 args_cli = parser.parse_args()
 
@@ -154,42 +154,6 @@ def listener_server_spin(loop, data):
             print(f"listener removed: {len(listeners_to_remove)}")
             print(f"Current listener number: {len(current_listeners)}")
 
-
-def ros_reset(loop):
-    global env
-    # get joint states from env
-    arm_dof_pos = env.robot.data.arm_dof_pos.cpu().numpy().tolist()
-    arm_dof_vel = env.robot.data.arm_dof_vel.cpu().numpy().tolist()
-    tool_dof_pos = env.robot.data.tool_dof_pos.cpu().numpy().tolist()
-    tool_dof_vel = env.robot.data.tool_dof_vel.cpu().numpy().tolist()
-    object_positions = get_object_positions().cpu().numpy().tolist()
-    object_orientations = get_object_orientations().cpu().numpy().tolist()
-    reset_buf = env.reset_buf.cpu().numpy().tolist()
-    reset_buf = [1 for _ in reset_buf]
-
-    data = pre_process_obs(arm_dof_pos, arm_dof_vel, tool_dof_pos, tool_dof_vel, object_positions, object_orientations, reset_buf)
-
-    if current_listeners:
-        listeners_to_remove = []
-
-        for listener in current_listeners:
-            env_num = listener_env_nums.get(listener)
-            if env_num is not None:
-                data_dict = data[env_num]
-                json_data = json.dumps(data_dict)
-                successful = loop.run_until_complete(safe_send(listener, json_data))
-                if not successful:
-                    listeners_to_remove.append(listener)
-            else:
-                listeners_to_remove.append(listener)  # Remove if no env_num is associated
-
-        for listener in listeners_to_remove:
-            current_listeners.remove(listener)
-            listener_env_nums.pop(listener, None)  # Remove the listener from the env_num mapping as well
-            print(f"listener removed: {len(listeners_to_remove)}")
-            print(f"Current listener number: {len(current_listeners)}")
-
-
 def pre_process_actions(offsets, action_raw: torch.Tensor) -> torch.Tensor:
     """Pre-process actions for the environment."""
     # to convert the action from franka space to RL space
@@ -198,11 +162,11 @@ def pre_process_actions(offsets, action_raw: torch.Tensor) -> torch.Tensor:
     offset_action_first7 = action_raw[:, :7] - offsets_tensor
     # Concatenate the result with the last element of action_raw
     offset_action = torch.cat([offset_action_first7, action_raw[:, 7:]], dim=1)
-    
+
     return offset_action
 
 
-def pre_process_obs(arm_dof_pos, arm_dof_vel, tool_dof_pos, tool_dof_vel, object_positions, object_orientations, reset_buf):
+def pre_process_obs(arm_dof_pos, arm_dof_vel, tool_dof_pos, tool_dof_vel, object_positions, object_orientations, reset_buf, success_counters, falling_counters, timeout_counters):
     """Pre-process joint_states for the environment."""
     data = []
     for num in range(env.num_envs):
@@ -214,6 +178,9 @@ def pre_process_obs(arm_dof_pos, arm_dof_vel, tool_dof_pos, tool_dof_vel, object
                     "object_positions": object_positions[num],
                     "object_orientations": object_orientations[num],
                     "reset_buf": int(reset_buf[num]),
+                    "success_counters": int(success_counters[num]),
+                    "falling_counters": int(falling_counters[num]),
+                    "timeout_counters": int(timeout_counters[num])
                 }
         data.append(item_data)
     return data
@@ -263,7 +230,7 @@ def main():
     # parse configuration
     env_cfg = parse_env_cfg(args_cli.task, use_gpu=not args_cli.cpu, num_envs=args_cli.num_envs)
     # modify configuration
-    env_cfg.terminations.episode_timeout = False
+    env_cfg.terminations.episode_timeout = True
     env_cfg.terminations.is_success = True
     env_cfg.observations.return_dict_obs_in_group = True
 
@@ -287,8 +254,10 @@ def main():
 
     # reset environment
     obs_dict = env.reset()
-    # robomimic only cares about policy observations
-    obs = obs_dict["policy"]
+    # obs = {}
+    # obs.update(obs_dict["policy"])
+    # obs.update(obs_dict["RGB_views"])
+    obs = obs_dict["RGB_views"]
     # reset interfaces
     
     collector_interface.reset()
@@ -303,6 +272,8 @@ def main():
     offsets = get_joints_offsets()
     initial_global_actions()
 
+    is_success = torch.zeros(env.num_envs, dtype=torch.int, device=env.device)
+    joint_scale_values = torch.tensor([2.7, 1.5, 0.001, 0.68, 2.8, 1.5, 2.2, 1.0], device=env.device)
     # simulate environment
     with contextlib.suppress(KeyboardInterrupt):
         while not collector_interface.is_stopped():
@@ -313,12 +284,17 @@ def main():
             tool_dof_vel = env.robot.data.tool_dof_vel.cpu().numpy().tolist()
             object_positions = get_object_positions().cpu().numpy().tolist()
             object_orientations = get_object_orientations().cpu().numpy().tolist()
-            reset_buf = env.success_counters.cpu().numpy().tolist()
-            teacher_obs = pre_process_obs(arm_dof_pos, arm_dof_vel, tool_dof_pos, tool_dof_vel, object_positions, object_orientations, reset_buf)
+            reset_buf = env.reset_buf.cpu().numpy().tolist()
+            success_counters = env.success_counters.cpu().numpy().tolist()
+            falling_counters = env.falling_counters.cpu().numpy().tolist()
+            timeout_counters = env.timeout_counters.cpu().numpy().tolist()
+            teacher_obs = pre_process_obs(arm_dof_pos, arm_dof_vel, tool_dof_pos, tool_dof_vel, object_positions, object_orientations, reset_buf, success_counters, falling_counters, timeout_counters)
 
             # send out joint states to websocket
             listener_server_spin(loop, teacher_obs)
 
+            # mark env is success
+            is_success[env.success_counters == 29] = 1
             # reset global_action
             reset_action = torch.tensor([0., -0.7850000262260437, 0., -2.3559999465942383, 0., 1.57079632679, 0.7850000262260437, 1.], device=env.device)
             reset_buf_np = env.reset_buf.cpu().numpy()
@@ -330,18 +306,32 @@ def main():
             # compute actions based on environment offsets
             actions = pre_process_actions(offsets, global_actions)
 
+            # unitfy actions
+            actions /= joint_scale_values
+            actions[:, 2] = 0.0
             # -- obs
             for key, value in obs.items():
                 collector_interface.add(f"obs/{key}", value)
-            # -- actions
-            collector_interface.add("actions", actions)
+            # -- actions--joint
+            # collector_interface.add("actions", actions)
             # perform action on environment
             obs_dict, rewards, dones, info = env.step(actions)
             # check that simulation is stopped or not
             if env.unwrapped.sim.is_stopped():
                 break
-            # robomimic only cares about policy observations
-            obs = obs_dict["policy"]
+
+            # -- actions--cart
+            tool_positions = obs_dict["policy"]["tool_positions"]
+            tool_orientations = obs_dict["policy"]["tool_orientations"]
+            tool_actions = obs_dict["policy"]["tool_actions"]
+            cartesian_actions = torch.cat((tool_positions, tool_orientations, tool_actions), dim=1)
+            collector_interface.add("actions", cartesian_actions)
+
+            # obs = {}
+            # obs.update(obs_dict["policy"])
+            # obs.update(obs_dict["RGB_views"])
+
+            obs = obs_dict["RGB_views"]
             # store signals from the environment
             # -- next_obs
             for key, value in obs.items():
@@ -358,8 +348,11 @@ def main():
                     f"Only goal-conditioned environment supported. No attribute named 'is_success' found in {list(info.keys())}."
                 )
             # flush data from collector for successful environments
-            reset_env_ids_flush = dones.nonzero(as_tuple=False).squeeze(-1)
+            reset_env_ids_flush = is_success.nonzero(as_tuple=False).squeeze(-1)
+            if reset_env_ids_flush.numel() != 0:
+                print("ENV", reset_env_ids_flush.tolist(), "Successed!")
             collector_interface.flush(reset_env_ids_flush)
+            is_success[reset_env_ids_flush] = 0
 
     # close the simulator
     collector_interface.close()

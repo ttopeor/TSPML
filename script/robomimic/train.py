@@ -43,6 +43,7 @@ import numpy as np
 import os
 import sys
 import time
+import datetime
 import torch
 import traceback
 from collections import OrderedDict
@@ -124,7 +125,8 @@ def train(config, device):
     print("")
 
     # setup for a new training run
-    data_logger = DataLogger(log_dir, log_tb=config.experiment.logging.log_tb)
+
+    data_logger = DataLogger(log_dir, log_tb=config.experiment.logging.log_tb, config=config)
     model = algo_factory(
         algo_name=config.algo_name,
         config=config,
@@ -331,7 +333,9 @@ def main(args):
     # load config
     if args.task is not None:
         # load config from json file
-        with open(ROBOMIMIC_CONFIG_FILES_DICT[args.task][args.algo]) as f:
+        file_path = "/home/robot/Desktop/workspace/TSPML/script/robomimic/pick_bc.json"
+        # with open(ROBOMIMIC_CONFIG_FILES_DICT[args.task][args.algo]) as f:
+        with open(file_path) as f:
             ext_cfg = json.load(f)
             config = config_factory(ext_cfg["algo_name"])
         # update config with external json - this will throw errors if
@@ -344,8 +348,11 @@ def main(args):
     if args.dataset is not None:
         config.train.data = args.dataset
 
-    if args.name is not None:
-        config.experiment.name = args.name
+    # if args.name is not None:
+    #    config.experiment.name = args.name
+    current_datetime = datetime.datetime.now()
+    formatted_datetime = current_datetime.strftime("%d-%m-%Y_%H-%M")
+    config.experiment.name = f"{config.experiment.name}_{formatted_datetime}"
 
     # change location of experiment directory
     config.train.output_dir = os.path.abspath(os.path.join("./logs/robomimic", args.task))
@@ -378,12 +385,12 @@ if __name__ == "__main__":
     parser.add_argument(
         "--dataset",
         type=str,
-        default=None,
+        default="/home/robot/Desktop/workspace/TSPML/script/robomimic/logs/robomimic/Isaac-Pick-Franka-v0/hdf_dataset.hdf5",
         help="(optional) if provided, override the dataset path defined in the config",
     )
 
-    parser.add_argument("--task", type=str, default=None, help="Name of the task.")
-    parser.add_argument("--algo", type=str, default=None, help="Name of the algorithm.")
+    parser.add_argument("--task", type=str, default="Isaac-Pick-Franka-v0", help="Name of the task.")
+    parser.add_argument("--algo", type=str, default="bc", help="Name of the algorithm.")
 
     args = parser.parse_args()
     main(args)
